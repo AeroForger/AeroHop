@@ -10,10 +10,10 @@ AeroHop's main purpose is to make Distro hopping much easier as it can automatic
 
 ## features
 AeroHop provides many useful features such as:
--User's custom pkgs - AeroHop automatically saves user inputted pkgs to Custom.json making your config reporoducable
--Good looking ui - AeroHop uses spectre.console which provides great looks
--Toggle safety features - AeroHop has 3 main safety features that can be turned off/on in the start menu
--lightweight
+* User's custom pkgs - AeroHop automatically saves user inputted pkgs to Custom.json making your config reproducible
+* Good looking ui - AeroHop uses spectre.console which provides great looks
+* Toggle safety features - AeroHop has 3 main safety features that can be turned off/on in the start menu
+* lightweight
 
 ---
 
