@@ -31,30 +31,5 @@ chmod +x AeroHop
 ./AeroHop
 ```
 
-## Code structure
-
-AeroHop is separated into different components to keep the code organized and easier to maintain.
-
-
-```
-  AeroHop/
-    ├── Engine/
-    │   ├── Core.cs
-    │   └── Menu.cs
-    ├── Worker/
-    │   ├── Validator.cs
-    │   ├── Downloader.cs
-    │   ├── Storage.cs
-    │   └── Loader.cs
-    ├── JSON/
-    │   ├── Gaming.json
-    │   ├── Dev.json
-    │   ├── Basics.json
-    │   └── Custom.json
-    ├── Program.cs
-    └── AeroHop.csproj
-```
-`You can use` [tree nathanfriend](https://tree.nathanfriend.com) `to create this type of path visualization`
-
 ### License
 Apache V2.0 License
