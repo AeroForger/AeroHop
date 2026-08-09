@@ -14,27 +14,29 @@ class Menu
     {
         return AnsiConsole.Prompt(
             new SelectionPrompt<string>()
-                .Title("[bold green]AeroHop[/]")
-                .PageSize(10)
+                .Title("[bold green]AeroHop[/] [grey]<v1.0>[/]")
+                .PageSize(8)
+                .HighlightStyle(Style.Parse("bold yellow"))
+                .MoreChoicesText("[grey](Use arrow keys to navigate, Enter to select)[/]")
                 .AddChoices(new[] {
                     "Start AeroHop",
                     "Settings",
                     "Exit"
                 })
         );
-
     }
     public List<string> SettingsMenu(bool jsonchecker, bool filechecker, bool commandchecker)
     {
         return AnsiConsole.Prompt(
             new MultiSelectionPrompt<string>()
                 .Title("[bold yellow]Settings[/]")
-                .PageSize(10)
+                .PageSize(8)
+                .HighlightStyle(Style.Parse("bold green"))
+                .MoreChoicesText("[grey](Space to toggle, Enter to confirm)[/]")
                 .AddChoices(new[] {
-                    $"Toggle On/Off Json Checker",
-                    $"Toggle On/Off File Checker",
-                    $"Toggle On/Off Command Checker"
-                    
+                    "Toggle On/Off Json Checker",
+                    "Toggle On/Off File Checker",
+                    "Toggle On/Off Command Checker"
                 })
         );
     }
@@ -49,8 +51,10 @@ class Menu
     {
         return AnsiConsole.Prompt(
             new SelectionPrompt<string>()
-                .Title("[bold green]AeroHop V1.0[/]")
-                .PageSize(10)
+                .Title("[bold green]AeroHop V1.0[/] [grey]<main menu>[/]")
+                .PageSize(8)
+                .HighlightStyle(Style.Parse("bold cyan"))
+                .MoreChoicesText("[grey](Use arrow keys to choose an action)[/]")
                 .AddChoices(new[] {
                     "Start Downloading",
                     "Profiles",
@@ -66,7 +70,9 @@ class Menu
         return AnsiConsole.Prompt(
             new MultiSelectionPrompt<string>()
                 .Title("[bold yellow]Profiles[/]")
-                .PageSize(10)
+                .PageSize(8)
+                .HighlightStyle(Style.Parse("bold magenta"))
+                .MoreChoicesText("[grey](Space to toggle profiles, Enter to confirm)[/]")
                 .AddChoices(new[] {
                     "Gaming",
                     "Dev",
