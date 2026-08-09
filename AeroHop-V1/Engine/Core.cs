@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Spectre.Console;
 using Worker;
 
@@ -16,10 +17,10 @@ public class Core
     bool filechecker = true;
     bool commandchecker = true;
 
-    public List<string> Profiles = ["Basics"];
+    public List<string> Profiles = new List<string>();
     public (string Distro, string PM) SysData;
 
-    public void data()
+    public void Data()
     {
         SysData = loader.SendData();
     }
@@ -66,12 +67,13 @@ public class Core
             }
         }
     }
+
     public void MainMenuLogic()
     {
         while (true)
         {
             // Changes SysData to include Distro + Package Manager
-            data();
+            Data();
             var choice = menu.MainMenu();
             switch (choice)
             {
@@ -81,8 +83,12 @@ public class Core
                     bool success = validator.Switches(jsonchecker, filechecker, commandchecker);
                     if (success)
                     {
+                        if (!Profiles.Contains("Basics") && !Profiles.Contains("Custom") && !Profiles.Contains("Dev") && !Profiles.Contains("Gaming"))
+                        {
+                            Profiles.Add("Basics");
+                        }
                         var pkgsData = loader.LoadProfiles(Profiles);
-                        AnsiConsole.MarkupLine("[bold green]This may take a while");
+                        AnsiConsole.MarkupLine("[bold green]This may take a while[/]");
                         bool downloadSuccess = downloader.Download(SysData.PM, pkgsData);
                         if (!downloadSuccess)
                         {
@@ -108,19 +114,28 @@ public class Core
                 case "See packages":
                 {
                     AnsiConsole.MarkupLine("[bold yellow]Packages Menu[/]");
-                    var pkgsData = loader.LoadProfiles(Profiles);
-                    AnsiConsole.MarkupLine("[bold green]Packages loaded successfully. Here are the packages:[/]");
-                    AnsiConsole.MarkupLine($"[bold red]Profiles toggled: {string.Join(", ", Profiles)}[/]");
-                    if (pkgsData.Count == 0)
+                    if (!Profiles.Contains("Basics") && !Profiles.Contains("Custom") && !Profiles.Contains("Dev") && !Profiles.Contains("Gaming"))
                     {
-                        AnsiConsole.MarkupLine("[bold red]No packages found for the selected profiles.[/]");
-                        return;
+                        AnsiConsole.MarkupLine("[bold blue] A profile isnt chosen[/]");
                     }
-                    foreach (var pkg in pkgsData)
+                    else
                     {
-                        AnsiConsole.MarkupLine($"[blue]- {pkg}[/]");
+                        var pkgsData = loader.LoadProfiles(Profiles);
+                        AnsiConsole.MarkupLine("[bold green]Packages loaded successfully. Here are the packages:[/]");
+                        AnsiConsole.MarkupLine($"[bold red]Profiles toggled: {string.Join(", ", Profiles)}[/]");
+                        if (pkgsData.Count == 0)
+                        {
+                            AnsiConsole.MarkupLine("[bold red]No packages found for the selected profiles.[/]");
+                            return;
+                        }
+                        foreach (var pkg in pkgsData)
+                        {
+                            AnsiConsole.MarkupLine($"[blue]- {pkg}[/]");
+                        }
                     }
+
                     break;
+                
                 }
                 case "Exit":
                     AnsiConsole.MarkupLine("[bold red]Exiting AeroHop...[/]");
@@ -131,7 +146,7 @@ public class Core
                 default:
                     AnsiConsole.MarkupLine("[bold red]Invalid choice.[/]"); //this useless but who knows
                     break;
-                
+
             }
     
         }
