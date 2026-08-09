@@ -22,14 +22,31 @@ AeroHop provides many useful features such as:
 *download the latest release and run these commands*
  
 ```bash
-tar -xzf AeroHop-v1.0-linux-x64.tar.gz
+
+tar -xzf AeroHop-v1.1.tar.gz
 
 cd AeroHop-v1.0-linux-x64
 
 chmod +x AeroHop
 
-./AeroHop
+sudo ./AeroHop
+
 ```
+AeroHop requires root to download packages.
+
+---
+
+## Custom Packages Menu
+
+To add Custom Packages to Custom.json you need to go to the Custom pkgs and type your desired packages in the input field
+
+Example:
+```
+code,dotnet-sdk
+
+```
+
+---
 
 ### License
 Apache V2.0 License
