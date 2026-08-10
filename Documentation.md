@@ -1,5 +1,7 @@
 # AeroHop
 
+<div align="center">
+
 ## Code structure
 
 **AeroHop is split into 3 sections**
@@ -11,6 +13,8 @@
 | Program.cs | Starts the app |
 
 ---
+
+</div>
 
 ### Worker/
 
