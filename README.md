@@ -23,26 +23,23 @@ AeroHop provides many useful features such as:
  
 ```bash
 
-tar -xzf AeroHop-v1.1.tar.gz
-
-cd AeroHop-v1.0-linux-x64
+tar -xzf AeroHop.tar.gz //or what ever is the name of current release
 
 chmod +x AeroHop
 
-sudo ./AeroHop
+./AeroHop or Sudo ./AeroHop
 
 ```
-AeroHop requires root to download packages.
 
 ---
 
 ## Custom Packages Menu
 
-To add Custom Packages to Custom.json you need to go to the Custom pkgs and type your desired packages in the input field
+To add Custom Packages to Custom.json you need to go to the Custom pkgs menu section and type your desired packages in the input field
 
 Example:
 ```
-code,dotnet-sdk
+code,dotnet-sdk,swayfx
 
 ```
 
