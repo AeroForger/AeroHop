@@ -1,0 +1,51 @@
+{
+    "apt": [
+        "git",
+        "vim",
+        "docker",
+        "gcc",
+        "curl"
+    ],
+    "pacman": [
+        "git",
+        "vim",
+        "docker",
+        "gcc",
+        "curl"
+    ],
+    "apk": [
+        "git",
+        "vim",
+        "docker",
+        "gcc",
+        "curl"
+    ],
+    "dnf": [
+        "git",
+        "vim",
+        "docker",
+        "gcc",
+        "curl"
+    ],
+    "zypper": [
+        "git",
+        "vim",
+        "docker",
+        "gcc",
+        "curl"
+    ],
+    "yum": [
+        "git",
+        "vim",
+        "docker",
+        "gcc",
+        "curl"
+    ],
+    "snap": [
+        "git",
+        "vim",
+        "docker",
+        "gcc",
+        "curl"
+    ]
+}

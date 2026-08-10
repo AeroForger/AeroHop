@@ -1,0 +1,44 @@
+{
+    "apt": [
+        "steam",
+        "lutris",
+        "wine",
+        "gamemode"
+    ],
+    "pacman": [
+        "steam",
+        "lutris",
+        "wine",
+        "gamemode"
+    ],
+    "apk": [
+        "steam",
+        "lutris",
+        "wine",
+        "gamemode"
+    ],
+    "dnf": [
+        "steam",
+        "lutris",
+        "wine",
+        "gamemode"
+    ],
+    "zypper": [
+        "steam",
+        "lutris",
+        "wine",
+        "gamemode"
+    ],
+    "yum": [
+        "steam",
+        "lutris",
+        "wine",
+        "gamemode"
+    ],
+    "snap": [
+        "steam",
+        "lutris",
+        "wine",
+        "gamemode"
+    ]
+}
