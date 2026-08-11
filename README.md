@@ -4,26 +4,28 @@ A tool light as air that helps you hop between Linux distributions.
 ---
 
 ## Purpose
-AeroHop's main purpose is to make Distro hopping much easier as it can automatically download packages that are in `Basics.json`, `Dev.json`, `Gaming.json` or `Custom.json`
+AeroHop simplifies distro hopping by automating the installation of your core software stack. It seamlessly manages packages defined in profile configs (`Basics.json`, `Dev.json`, `Gaming.json`) or your own personal `Custom.json`.
 
 ---
 
 ## features
 AeroHop provides many useful features such as:
 * User's custom pkgs - AeroHop automatically saves user inputted pkgs to Custom.json making your config reproducible
-* Good looking ui - AeroHop uses spectre.console which provides great looks
+* Good looking ui - AeroHop uses [Spectre.Console](https://spectreconsole.net/) which provides great looks
 * Toggle safety features - AeroHop has 3 main safety features that can be turned off/on in the start menu
+* Profiles - AeroHop has 3 pre-made profiles : `Basics.json`, `Dev.json` and `Gaming.json` 
 * lightweight
 
 ---
 
 ## How to install and run
 
-*download the latest release and run these commands*
+1. Download the latest release from the [Releases page](../../releases).
+2. Extract the archive and make the executable run:
  
 ```bash
 
-tar -xzf AeroHop.tar.gz //or what ever is the name of current release
+tar -xzf AeroHop.tar.gz //or whatever is the name of current release
 
 chmod +x AeroHop
 
